@@ -148,3 +148,92 @@
 // })();
 
 //11
+
+//Callvack hell funcksiyasidan quloyroq promise va Async/Await
+//miso:
+
+// const lesson1 = () => console.log("Lesson1");
+
+// const lesson2 = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       console.log("Lesson2");
+//       resolve();
+//     }, 2000);
+//   });
+// };
+
+// const lesson3 = () => console.log("Lesson3");
+
+// async function run() {
+//   lesson1();
+//   await lesson2();
+//   lesson3();
+// }
+
+// run();
+
+//12)
+
+//ikki sonning bir biriga yi'indisini aniqlovchi funcsiya
+
+// const calculate = (a,b) => {
+//   return new Promise((resolve, reject) => {
+//     if (typeof a === `number` && typeof b === `number`) {
+//       resolve(a + b);
+//     } else {
+//       reject("Error");
+//     }
+//   });
+// };
+
+// calculate(10, 70)
+//   .then((result) => console.log(`yigindi ${result}ga teng`))
+//   .catch((error) => console.error(error));
+
+// ikki sonning bir biriga kopaytmasini aniqlovchi funcsiya
+
+// const calculate2 = (a, b) => {
+//   return new Promise((resolve, reject) => {
+//     if (typeof a === `number` && typeof b === `number`) {
+//       resolve(a * b);
+//     }else{
+//         reject('error')
+//     }
+//   });
+// };
+
+// calculate2(3,4)
+// .then(result => console.log(`Kopaytma ${result} ga teng`))
+// .catch(error => console.error(error))
+
+//boluvchi funcsiya promise orqali
+
+// const calculate3 = (a, b) => {
+//   return new Promise((resolve, reject) => {
+//     if (typeof a === `number` && typeof b === `number`) {
+//       resolve(a / b);
+//     } else {
+//       reject("Nimadur xato ketdi");
+//     }
+//   });
+// };
+
+// calculate3(18, 6)
+//   .then((result) => console.log(`Bolinma ${result} ga teng`))
+//   .catch((error) => console.error(error));
+
+//13)
+
+// async function fetchData() {
+//   try {
+//     const response = await fetch(
+//       "https://jsonplaceholder.typicode.com/posts/1"
+//     );
+//     const data = await response.json();
+//     console.log(`FetchData:`, data);
+//   } catch (error) {
+//     console.error(`Error:`, error.massage);
+//   }
+// }
+// fetchData();
