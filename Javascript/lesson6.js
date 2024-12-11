@@ -530,20 +530,20 @@
 
 // 36. Async funksiyada xato yuz berganda konsolda xatoni chiqaruvchi kod yozing.
 
-async function getData() {
-  try {
-    let response = await fetch("https://jsonfghplaceholder.typicode.com/posts/1");
-    if (!response.ok) {
-      throw new Error("Malumotlar yuklashda xatolik yuz berdi");
-    }
-    let data = await response.json();
-    console.log(data);
-  } catch (error) {
-    console.log("Xato:", error.massage);
-  }
-}
+// async function getData() {
+//   try {
+//     let response = await fetch("https://jsonfghplaceholder.typicode.com/posts/1");
+//     if (!response.ok) {
+//       throw new Error("Malumotlar yuklashda xatolik yuz berdi");
+//     }
+//     let data = await response.json();
+//     console.log(data);
+//   } catch (error) {
+//     console.log("Xato:", error.massage);
+//   }
+// }
 
-getData();
+// getData();
 
 // 37. Callback yordamida massivni o'sish tartibida saralash funksiyasini yozing.
 // 38. Promise'dan foydalangan holda foydalanuvchi profili ma'lumotlarini yuklovchi kod yozing.
