@@ -583,56 +583,55 @@
 
 // 22. Meros olish orqali bir sinfdan ikkinchi sinfga ma'lumot o‘tkazishni ko‘rsating.
 
-class BankAccount {
-  constructor(owner, balance = 0) {
-    this.owner = owner;
-    this.balance = balance;
-  }
+// class BankAccount {
+//   constructor(owner, balance = 0) {
+//     this.owner = owner;
+//     this.balance = balance;
+//   }
 
-  borrow(amount) {
-    if (amount > 0) {
-      this.balance += amount;
-      console.log(`Mero olindi! Yangi balans: ${this.balance}`);
-    } else {
-      console.log("Miqdor musbat bo'lishi kerak");
-    }
-  }
+//   borrow(amount) {
+//     if (amount > 0) {
+//       this.balance += amount;
+//       console.log(`Mero olindi! Yangi balans: ${this.balance}`);
+//     } else {
+//       console.log("Miqdor musbat bo'lishi kerak");
+//     }
+//   }
 
-  getBalance() {
-    console.log(`Joriy balans: ${this.balance}`);
-  }
-}
+//   getBalance() {
+//     console.log(`Joriy balans: ${this.balance}`);
+//   }
+// }
 
-const myAccount = new BankAccount("Omadbek", 1000);
-myAccount.borrow(500); // Mero olindi! Yangi balans: 1500
-myAccount.getBalance(); // Joriy balans: 1500
+// const myAccount = new BankAccount("Omadbek", 1000);
+// myAccount.borrow(500); // Mero olindi! Yangi balans: 1500
+// myAccount.getBalance(); // Joriy balans: 1500
 
-// 25. Foydalanuvchiga yangi yosh berish uchun set metodini qo'llang va unga cheklov qo'ying (faqat raqamlar).
+// // 25. Foydalanuvchiga yangi yosh berish uchun set metodini qo'llang va unga cheklov qo'ying (faqat raqamlar).
 
-class User {
-  constructor(name, age) {
-    this.name = name;
-    this._age = age;
-  }
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this._age = age;
+//   }
 
-  get age() {
-    return this._age;
-  }
+//   get age() {
+//     return this._age;
+//   }
 
-  set age(newAge) {
-    if (typeof newAge === "number" && newAge > 0) {
-      this._age = newAge;
-      console.log(`Yangi yosh: ${this._age}`);
-    } else {
-      console.log("Yosh faqat musbat raqam bo'lishi kerak");
-    }
-  }
-}
+//   set age(newAge) {
+//     if (typeof newAge === "number" && newAge > 0) {
+//       this._age = newAge;
+//       console.log(`Yangi yosh: ${this._age}`);
+//     } else {
+//       console.log("Yosh faqat musbat raqam bo'lishi kerak");
+//     }
+//   }
+// }
 
-const user = new User("Omadbek", 17);
-console.log(user.age); // 17
+// const user = new User("Omadbek", 17);
+// console.log(user.age); // 17
 
-user.age = 18; // Yangi yosh: 18
-user.age = -5; // Yosh faqat musbat raqam bo'lishi kerak
-user.age = "18"; // Yosh faqat musbat raqam bo'lishi kerak
-
+// user.age = 18; // Yangi yosh: 18
+// user.age = -5; // Yosh faqat musbat raqam bo'lishi kerak
+// user.age = "18"; // Yosh faqat musbat raqam bo'lishi kerak
