@@ -1,0 +1,29 @@
+{
+  "name": "lesson12",
+  "version": "1.0.0",
+  "description": "12-lesson JavaScript | Nodejs",
+  "main": "app.js",
+  "type": "module",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "js, lesson, nodejs"
+  },
+  "keywords": [
+    "js",
+    "lesson",
+    "nodejs"
+  ],
+  "author": "OmadbekUmarboyev",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^5.4.1",
+    "uuid": "^11.0.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
