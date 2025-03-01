@@ -13,9 +13,8 @@ class userController {
 
   async createUser(req, res) {
     try {
-      const { name, age } = req.body; // Faqat kerakli malumotni ajratib olish
-      const user = await userService.createUser(name, age); // Servicega kerakli malumotlarni yuborish
-      res.status(201).json({ massage: "User created" }); // 201 status kodini qaytarish
+      const user = await userService.createUser(req, res);
+      res.status(201).json(user);
     } catch (error) {
       res.status(500).json({ message: error.message });
     }

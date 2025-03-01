@@ -1,0 +1,70 @@
+class response {
+  succsess(res, msg = null, data = null) {
+    return res.status(200).json({
+      status: "success",
+      message: msg || "Success",
+      result: data,
+    });
+  }
+  created(res, msg = null, data = null) {
+    return res.status(201).json({
+      status: "success",
+      message: msg || "Created",
+      result: data,
+    });
+  }
+  noContent(res, msg = null) {
+    return res.status(204).json({
+      status: "success",
+      message: msg || "No Content",
+      data: null,
+    });
+  }
+  badRequest(res, msg = null) {
+    return res.status(400).json({
+      status: "error",
+      message: msg || "Bad Request",
+      data: null,
+    });
+  }
+  unauthorized(res, msg = null) {
+    return res.status(401).json({
+      status: "error",
+      message: msg || "Unauthorized",
+      data: null,
+    });
+  }
+  forbidden(res, msg = null) {
+    return res.status(403).json({
+      status: "error",
+      message: msg || "forbidden",
+      data: null,
+    });
+  }
+  notFound(res, msg = null) {
+    return res.status(404).json({
+      status: "error",
+      message: msg || "Not Found",
+      data: null,
+    });
+  }
+  conflict(res, msg = null) {
+    return res.status(409).json({
+      status: "error",
+      message: msg || "conflict",
+      data: null,
+    });
+  }
+  internalServerError(res, msg = null) {
+    return res.status(500).json({
+      status: "error",
+      message: msg || "Internal Server Error",
+      data: null,
+    });
+  }
+
+  custom()
+
+}
+
+module.exports = new response();
